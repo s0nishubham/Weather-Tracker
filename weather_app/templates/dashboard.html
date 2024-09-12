@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Dashboard</title>
+    
+</head>
+<body>
+    <h1>Weather Dashboard</h1>
+    <div class="weather-container" id="weather-container">
+        <!-- Weather content here -->
+    </div>
+    <form method="get">
+        <input type="text" name="city" placeholder="Enter city" value="{{ city }}">
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <h2>Weather in {{ city }}</h2>
+    <p>Temperature: {{ temperature }}°C</p>
+    <!-- <p>Description: {{ description }}</p> -->
+    {% if icon %}
+        <img src="http://openweathermap.org/img/wn/{{ icon }}@2x.png" alt="Weather icon">
+    {% endif %}
+ 
+</body>
+</html>
